@@ -1,0 +1,11 @@
+<h2>Course Detail</h2>
+
+@if(course) {
+    <div class="course-card">
+        <img [src]="course.img" [alt]="course.title" width=100 />
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.description }}</p>
+        <p>{{ course.price | currency:'USD' }}</p>
+        <p>{{ course.date | date:'longDate' }}</p>
+    </div>
+}
